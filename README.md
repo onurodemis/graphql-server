@@ -1,2 +1,2 @@
 # graphql
-An GraphQL Server with MongoDB
+A GraphQL Server with MongoDB

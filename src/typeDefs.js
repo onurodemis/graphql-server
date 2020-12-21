@@ -1,7 +1,8 @@
 import { gql } from "apollo-server-express";
 
 export const typeDefs = gql`
-  scalar Date
+  scalar DateTime
+  scalar Long
 
   type Query {
     healty: String    
@@ -13,11 +14,11 @@ export const typeDefs = gql`
     name: String!
     surname: String!
     email: String
-    birthDate: String
-    phone: String
+    birthDate: DateTime
+    phone: Long
   }
 
   type Mutation {
-    createUser(name: String, surname: String, email: String, birthDate: String, phone: String): User!
+    createUser(name: String, surname: String, email: String, birthDate: DateTime, phone: Long): User!
   }
 `;

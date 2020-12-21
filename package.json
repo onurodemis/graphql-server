@@ -1,7 +1,7 @@
 {
   "name": "graphql-mongo-server",
   "version": "1.0.0",
-  "description": "An GraphQL Server with MongoDB",
+  "description": "A GraphQL Server with MongoDB",
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node src/index.js"

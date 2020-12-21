@@ -10,7 +10,7 @@ export const resolvers = {
       const user = new User({ name, surname, email, birthDate, phone });
       let foundUser = [];
 
-      await User.find(async (_, item) => {
+      await User.find((_, item) => {
         foundUser = item.filter(usr => usr.email === email);
       });
 

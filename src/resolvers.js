@@ -22,6 +22,9 @@ export const resolvers = {
       }
 
       return user;
+    },
+    updateUser: async (_, { id }) => {
+      console.log(id);
     }
   }
 };

@@ -13,12 +13,13 @@ export const typeDefs = gql`
     id: ID!
     name: String!
     surname: String!
-    email: String
+    email: String!
     birthDate: DateTime
     phone: Long
   }
 
   type Mutation {
     createUser(name: String, surname: String, email: String, birthDate: DateTime, phone: Long): User!
+    updateUser(id:ID, name: String, surname: String, email: String, birthDate: DateTime, phone: Long): User!
   }
 `;

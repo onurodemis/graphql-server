@@ -5,7 +5,7 @@ export const typeDefs = gql`
   scalar Long
 
   type Query {
-    healty: String    
+    healthy: String
     users: [User!]!
   }
 

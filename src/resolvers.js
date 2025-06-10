@@ -2,7 +2,7 @@ import { User } from './models/User';
 
 export const resolvers = {
   Query: {
-    healty: () => 'Graphql server is healthy',
+    healthy: () => 'Graphql server is healthy',
     users: () => User.find()
   },
   Mutation: {

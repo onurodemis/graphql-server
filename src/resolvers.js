@@ -8,20 +8,15 @@ export const resolvers = {
   Mutation: {
     createUser: async (_, { name, surname, email, birthDate = "", phone = "" }) => {
       const user = new User({ name, surname, email, birthDate, phone });
-      let foundUser = [];
 
-      await User.find((_, item) => {
-        foundUser = item.filter(usr => usr.email === email);
-      });
+      const foundUser = await User.find({ email });
 
       if (foundUser.length === 0) {
         await user.save();
-      }
-      else {
-        return new Error(`${email} already exist please check your information`);
+        return user;
       }
 
-      return user;
+      throw new Error(`${email} already exists please check your information`);
     },
     updateUser: async (_, { id }) => {
       console.log(id);

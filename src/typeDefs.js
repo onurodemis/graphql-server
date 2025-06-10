@@ -4,10 +4,10 @@ export const typeDefs = gql`
   scalar DateTime
   scalar Long
 
-  type Query {
-    healty: String    
-    users: [User!]!
-  }
+    type Query {
+      healthy: String
+      users: [User!]!
+    }
 
   type User {
     id: ID!
